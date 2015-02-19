@@ -16,7 +16,7 @@ handle_virtualenv(){
     fi
 
     # activate virtualenv dynamically
-    if [ -e "$PWD/.env" ] && [ "$PWD" != "$PREVENV_PATH" ]; then
+    if [ -d "$PWD/.env" ] && [ "$PWD" != "$PREVENV_PATH" ]; then
       PREV_PS1="$PS1"
       PREV_PATH="$PATH"
       PREVENV_PATH="$PWD"
